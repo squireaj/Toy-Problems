@@ -152,23 +152,21 @@ simpleSymbols("+a++===+b+c+b")
 
 //Using the JavaScript language, have the function LongestWord(sen) takes the sen parameter being passed and returns the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty. 
 
-var words = "this is a sample string"
+function LongestWord(sen) {
+  var longestMatch = 0;
+  var retVal = "";
+  var strings = sen.match(/[a-z]/g);
 
-var LongestWord = function(sen){
-  sen = sen.split(' ')
-  console.log(sen)
-  returnArray = [];
-  for(var i = sen.length - 1; i > 0; i--){
-    if(sen[i].length > sen[i - 1].length){
-      returnArray.push(sen[i])
+ for (i = 0; i < strings.length; i++) {
+    if(strings[i].length > longestMatch) {
+      longestMatch = strings[i].length;
+      retVal = strings[i];
     }
   }
-  return returnArray
+  return retVal;
 }
 
-//or
 
-LongestWord(words)
 
 function LongestWord(sen) { 
 
@@ -193,22 +191,23 @@ function LongestWord(sen) {
     }
   }
   
+  // code goes here
   return lng; 
             
 }
 
-Write a function that accepts a number, n, and returns the nth Fibonacci number. Use a recursive solution to this problem; if you finish with time left over, implement an iterative solution.
- * nthFibonacci(2); // => 2
- * nthFibonacci(3); // => 3
- * nthFibonacci(4); // => 5
+//Write a function that accepts a number, n, and returns the nth Fibonacci number. Use a recursive solution to this problem; if you finish with time left over implement an iterative solution. 
 
+// nthFibonacci(2); // => 2
+// nthFibonacci(3); // => 3
+// nthFibonacci(4); // => 5
 
-
-
-
-
-
-
+var nthFib = function(num){
+  if(num - 2){
+    return num;
+  }
+  return nthFib(num - 2) + (num - 1)
+}
 
 
 
