@@ -168,6 +168,11 @@ var LongestWord = function(sen){
 
 LongestWord(words)
 
+Write a function that accepts a number, n, and returns the nth Fibonacci number. Use a recursive solution to this problem; if you finish with time left over, implement an iterative solution.
+ * nthFibonacci(2); // => 2
+ * nthFibonacci(3); // => 3
+ * nthFibonacci(4); // => 5
+
 
 
 
